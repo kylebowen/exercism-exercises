@@ -1,10 +1,10 @@
 class Hamming
 
-  def self.compute (a, b)
-    return 0 if a == b
-    raise ArgumentError if a.length != b.length
-    mutations = a.chars.zip(b.chars)
-    mutations.delete_if { |a, b| a == b }
+  def self.compute (strand1, strand2)
+    raise ArgumentError if strand1.length != strand2.length
+    mutations = strand1.chars.zip(strand2.chars)
+    mutations.delete_if { |nucleotide1, nucleotide2|
+      nucleotide1 == nucleotide2 }
     mutations.count
   end
 end
