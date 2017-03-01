@@ -1,8 +1,22 @@
-# Gigasecond
+# Rna Transcription
 
-Calculate the moment when someone has lived for 10^9 seconds.
+Given a DNA strand, return its RNA complement (per RNA transcription).
 
-A gigasecond is 10^9 (1,000,000,000) seconds.
+Both DNA and RNA strands are a sequence of nucleotides.
+
+The four nucleotides found in DNA are adenine (**A**), cytosine (**C**),
+guanine (**G**) and thymine (**T**).
+
+The four nucleotides found in RNA are adenine (**A**), cytosine (**C**),
+guanine (**G**) and uracil (**U**).
+
+Given a DNA strand, its transcribed RNA strand is formed by replacing
+each nucleotide with its complement:
+
+* `G` -> `C`
+* `C` -> `G`
+* `T` -> `A`
+* `A` -> `U`
 
 * * * *
 
@@ -35,7 +49,7 @@ run it like this:
 
 ## Source
 
-Chapter 9 in Chris Pine's online Learn to Program tutorial. [http://pine.fm/LearnToProgram/?Chapter=09](http://pine.fm/LearnToProgram/?Chapter=09)
+Rosalind [http://rosalind.info/problems/rna](http://rosalind.info/problems/rna)
 
 ## Submitting Incomplete Problems
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

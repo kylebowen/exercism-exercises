@@ -1,9 +1,7 @@
 require 'minitest/autorun'
-require 'time'
 require_relative 'gigasecond'
-require 'minitest/pride'
 
-# Test data version: 9d027ad
+# Test data version: 9049dc7
 
 class GigasecondTest < Minitest::Test
   def test_2011_04_25
@@ -38,8 +36,8 @@ class GigasecondTest < Minitest::Test
   # Test your 1Gs anniversary
   def test_with_your_birthday
     # skip
-    result = Gigasecond.from(Time.utc(1982, 7, 20, 0, 0, 0))
-    assert_equal Time.utc(2014, 3, 28, 1, 46, 40), result
+    result = Gigasecond.from(Time.utc(1982, 7, 20, 2, 20, 00))
+    assert_equal Time.utc(2014, 3, 28, 4, 6, 40), result
   end
 
   # Problems in exercism evolve over time, as we find better ways to ask
@@ -60,6 +58,6 @@ class GigasecondTest < Minitest::Test
   # http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/constants.html
 
   def test_bookkeeping
-    assert_equal 4, BookKeeping::VERSION
+    assert_equal 5, BookKeeping::VERSION
   end
 end
