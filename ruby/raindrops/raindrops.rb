@@ -4,10 +4,9 @@ class Raindrops
                    7 => 'Plong'}
 
   def self.convert(number)
-    converted_value = ''
-    SUBSTITUTIONS.each do |key, value|
-      converted_value << value if number % key == 0
-    end
+    converted_value = SUBSTITUTIONS.map do |key, value|
+      value if number % key == 0
+    end.join
     converted_value.empty? ? number.to_s : converted_value
   end
 end
