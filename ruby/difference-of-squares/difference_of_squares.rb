@@ -5,11 +5,11 @@ class Squares
   end
 
   def square_of_sum
-    (1..@num).reduce(0, :+) ** 2
+    ((@num * (@num + 1))/2) ** 2
   end
 
   def sum_of_squares
-    (1..@num).map { |n| n ** 2 }.reduce(0, :+)
+    (@num * (@num + 1) * ((2 * @num) + 1)) / 6
   end
 
   def difference
