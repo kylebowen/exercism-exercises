@@ -1,5 +1,5 @@
-java/*/.gradle/
-java/*/build.gradle
-java/*/build/
-java/*/.exercism/
+java-track/*/.gradle/
+java-track/*/build.gradle
+java-track/*/build/
+java-track/*/.exercism/
 
