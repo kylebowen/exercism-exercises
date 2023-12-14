@@ -1,0 +1,5 @@
+java/*/.gradle/
+java/*/build.gradle
+java/*/build/
+java/*/.exercism/
+
