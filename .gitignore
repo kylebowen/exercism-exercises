@@ -1,5 +1,7 @@
 java-track/*/.gradle/
 java-track/*/build.gradle
 java-track/*/build/
-java-track/*/.exercism/
+
+# Ignore the files in .exercism under all tracks and exercises
+*/*/.exercism/
 
