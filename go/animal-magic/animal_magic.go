@@ -2,17 +2,15 @@ package chance
 
 import (
 	"math/rand"
-	"time"
 )
 
 // RollADie returns a random int d with 1 <= d <= 20.
 func RollADie() int {
-	return rand.Intn(19) + 1
+	return rand.Intn(20) + 1
 }
 
 // GenerateWandEnergy returns a random float64 f with 0.0 <= f < 12.0.
 func GenerateWandEnergy() float64 {
-	rand.Seed(time.Now().UnixNano())
 	return rand.Float64() + float64(rand.Intn(12))
 }
 
