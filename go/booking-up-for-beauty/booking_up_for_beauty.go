@@ -20,16 +20,13 @@ func Schedule(date string) time.Time {
 // HasPassed returns whether a date has passed.
 func HasPassed(date string) bool {
 	layout := "January 2, 2006 15:04:05"
-	format := "1/02/2006 15:04:05"
 
 	parsed, err := time.Parse(layout, date)
 	if err != nil {
 		panic(err)
 	}
 
-	formatted := parsed.Format(format)
-
-	return Schedule(formatted).Before(time.Now())
+	return parsed.Before(time.Now())
 }
 
 // IsAfternoonAppointment returns whether a time is in the afternoon.
@@ -47,14 +44,14 @@ func IsAfternoonAppointment(date string) bool {
 // Description returns a formatted string of the appointment time.
 func Description(date string) string {
 	layout := "1/2/2006 15:04:05"
-	format := "Monday, January 2, 2006"
+	format := "Monday, January 2, 2006, at 15:04"
 
 	parsed, err := time.Parse(layout, date)
 	if err != nil {
 		panic(err)
 	}
 
-	return fmt.Sprintf("You have an appointment on %v, at %v:%v.", parsed.Format(format), parsed.Hour(), parsed.Minute())
+	return fmt.Sprintf("You have an appointment on %v.", parsed.Format(format))
 }
 
 // AnniversaryDate returns a Time with this year's anniversary.
