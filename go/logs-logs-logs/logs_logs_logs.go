@@ -7,9 +7,9 @@ import (
 // Application identifies the application emitting the given log.
 func Application(log string) string {
 	applicationMap := map[rune]string{
-		128269: "search",
-		10071:  "recommendation",
-		9728:   "weather",
+		'🔍': "search",
+		'❗': "recommendation",
+		'☀': "weather",
 	}
 
 	for _, char := range log {
