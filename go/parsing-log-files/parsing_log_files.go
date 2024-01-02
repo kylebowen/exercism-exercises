@@ -8,13 +8,13 @@ func IsValidLine(text string) bool {
 }
 
 func SplitLogLine(text string) []string {
-	re := regexp.MustCompile(`<(~|\*|=|-)*>`)
+	re := regexp.MustCompile(`<[~*=-]*>`)
 	return re.Split(text, -1)
 }
 
 func CountQuotedPasswords(lines []string) int {
 	count := 0
-	re := regexp.MustCompile(`(").*(?i)(password).*(")`)
+	re := regexp.MustCompile(`(?i)".*password.*"`)
 
 	for _, line := range lines {
 		if re.MatchString(line) {
@@ -25,12 +25,12 @@ func CountQuotedPasswords(lines []string) int {
 }
 
 func RemoveEndOfLineText(text string) string {
-	re := regexp.MustCompile(`(end-of-line\d+)`)
-	return re.ReplaceAllLiteralString(text, "")
+	re := regexp.MustCompile(`end-of-line\d+`)
+	return re.ReplaceAllString(text, "")
 }
 
 func TagWithUserName(lines []string) []string {
-	re := regexp.MustCompile(`(.*)(?:User\s+)(?P<name>\w+)`)
+	re := regexp.MustCompile(`.*User\s+(?P<name>\w+)`)
 	template := "[USR] $name $0"
 	results := []string{}
 
