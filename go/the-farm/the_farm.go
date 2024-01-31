@@ -31,7 +31,7 @@ func DivideFood(fc FodderCalculator, cows int) (float64, error) {
 
 // ValidateInputAndDivideFood adds more robust error handling around the inputs to DivideFood
 func ValidateInputAndDivideFood(fc FodderCalculator, cows int) (float64, error) {
-	if cows < 0 || cows == 0 {
+	if cows <= 0 {
 		return 0, errors.New("invalid number of cows")
 	}
 
