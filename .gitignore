@@ -6,6 +6,8 @@ cpp/*/build/
 cpp/*/test/
 cpp/*/Testing/
 
+typescript/*/.yarn/
+
 # Ignore the files in .exercism under all tracks and exercises
 */*/.exercism/
 
