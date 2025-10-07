@@ -2,6 +2,10 @@ java/*/.gradle/
 java/*/build.gradle
 java/*/build/
 
+cpp/*/build/
+cpp/*/test/
+cpp/*/Testing/
+
 # Ignore the files in .exercism under all tracks and exercises
 */*/.exercism/
 
